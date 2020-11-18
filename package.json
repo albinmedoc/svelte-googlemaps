@@ -1,5 +1,5 @@
 {
-  "name": "svelte-google-maps",
+  "name": "svelte-googlemaps",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
@@ -26,10 +26,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/albinmedoc/svelte-google-maps.git"
+    "url": "git+https://github.com/albinmedoc/svelte-googlemaps.git"
   },
   "bugs": {
-    "url": "https://github.com/albinmedoc/svelte-google-maps/issues"
+    "url": "https://github.com/albinmedoc/svelte-googlemaps/issues"
   },
-  "homepage": "https://github.com/albinmedoc/svelte-google-maps#readme"
+  "homepage": "https://github.com/albinmedoc/svelte-googlemaps#readme"
 }
