@@ -7,10 +7,10 @@
     const map = getMap();
     const marker = getMarker();
 
-    export let content;
+    export let options = {};
 
     let infowindow = new google.maps.InfoWindow({
-        content,
+        ...options,
     });
 
     marker.addListener('click', () => {

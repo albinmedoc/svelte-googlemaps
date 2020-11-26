@@ -6,12 +6,12 @@
     const { getMap } = getContext(key);
     const map = getMap();
 
-    export let options;
+    export let options = {};
 
     // Append the circle on the map
     const circle = new google.maps.Circle({
+        ...options,
         map,
-        ...(options && options),
     });
 
     // Remove the circle from the map on destroy

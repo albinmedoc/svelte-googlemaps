@@ -7,11 +7,11 @@ import Circle from './map/Circle.svelte';
 import Autocomplete from './Autocomplete.svelte';
 
 export {
-    Map as GoogleMap,
-    Marker as GoogleMapMarker,
-    InfoWindow as GoogleMapInfoWindow,
-    Polyline as GoogleMapPolyline,
-    Polygon as GoogleMapPolygon,
-    Circle as GoogleMapCircle,
-    Autocomplete as GoogleMapAutocomplete,
+    Map,
+    Marker,
+    InfoWindow,
+    Polyline,
+    Polygon,
+    Circle,
+    Autocomplete,
 };

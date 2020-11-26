@@ -6,14 +6,12 @@
     const { getMap } = getContext(key);
     const map = getMap();
 
-    export let paths;
-    export let options;
+    export let options = {};
 
     // Append the polygon on the map
     const polygon = new google.maps.Polygon({
-        map,
-        paths,
-        ...(options && options),
+        ...options,
+        map
     });
 
     // Remove the polygon from the map on destroy

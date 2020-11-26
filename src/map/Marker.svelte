@@ -12,15 +12,12 @@
         getMap: () => map,
     });
 
-    export let lat;
-    export let lng;
-    export let label = undefined;
+    export let options = {};
 
     // Append the marker on the map
     const marker = new google.maps.Marker({
-        position: { lat, lng },
-        map: map,
-        label: label,
+        ...options,
+        map
     });
 
     // Remove the marker from the map on destroy

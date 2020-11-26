@@ -6,14 +6,12 @@
     const { getMap } = getContext(key);
     const map = getMap();
 
-    export let path;
-    export let options;
+    export let options = {};
 
     // Append the polyline on the map
     const polyline = new google.maps.Polyline({
-        map,
-        path,
-        ...(options && options),
+        ...options,
+        map
     });
 
     // Remove the polyline from the map on destroy
