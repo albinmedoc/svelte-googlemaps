@@ -1,5 +1,5 @@
 {
-  "name": "svelte-googlemaps",
+  "name": "@albinmedoc/svelte-googlemaps",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
@@ -21,7 +21,7 @@
     "src",
     "dist"
   ],
-  "version": "1.1.0",
+  "version": "1.2.0",
   "dependencies": {},
   "author": "Albin Médoc",
   "license": "MIT",
