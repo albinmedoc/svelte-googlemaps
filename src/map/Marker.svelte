@@ -13,16 +13,26 @@
     });
 
     export let options = {};
+    export let marker = undefined;
 
-    // Append the marker on the map
-    const marker = new google.maps.Marker({
-        ...options,
-        map
-    });
+    const removeMarker = () => {
+        marker.setMap(null);
+    };
+
+    $: () => {
+        if (marker) {
+            removeMarker();
+        }
+        // Append the marker on the map
+        marker = new google.maps.Marker({
+            ...options,
+            map,
+        });
+    };
 
     // Remove the marker from the map on destroy
     onDestroy(() => {
-        marker.setMap(null);
+        removeMarker();
     });
 </script>
 

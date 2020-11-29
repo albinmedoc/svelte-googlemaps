@@ -5,8 +5,9 @@
     const dispatch = createEventDispatcher();
 
     export let api_key;
-    export let options;
+    export let options = {};
     export let placeholder = 'Enter a location';
+    export let value = '';
 
     let autocomplete;
     let input_element;
@@ -29,9 +30,9 @@
             }
             dispatch('placeChanged', current_place);
         });
-        dispatch('ready');
+        dispatch('ready', autocomplete);
     }
 </script>
 
 <GoogleSDK {api_key} on:ready={initialize} />
-<input bind:this={input_element} {disabled} placeholder={placeholder} />
+<input bind:value bind:this={input_element} {disabled} placeholder={placeholder} />

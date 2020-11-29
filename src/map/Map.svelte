@@ -10,18 +10,17 @@
         getMap: () => map,
     });
 
-
     export let api_key;
     export let options;
+    export let map = undefined;
 
     let map_element;
-    let map;
 
     // Initialize the map
     function initialize() {
         const google = window['google'];
         map = new google.maps.Map(map_element, options);
-        dispatch('ready');
+        dispatch('ready', map);
     }
 </script>
 
