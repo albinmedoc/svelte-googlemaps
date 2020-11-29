@@ -2,7 +2,8 @@ import type { SvelteComponent } from "svelte";
 
 export interface AutoCompleteProps {
     api_key: string;
-    options: google.maps.places.AutocompleteOptions;
+    options?: google.maps.places.AutocompleteOptions;
+    placeholder?: string;
 }
 
 declare class AutoComplete extends SvelteComponent {

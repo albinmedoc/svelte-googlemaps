@@ -6,6 +6,7 @@
 
     export let api_key;
     export let options;
+    export let placeholder = 'Enter a location';
 
     let autocomplete;
     let input_element;
@@ -33,4 +34,4 @@
 </script>
 
 <GoogleSDK {api_key} on:ready={initialize} />
-<input bind:this={input_element} {disabled} />
+<input bind:this={input_element} {disabled} placeholder={placeholder} />

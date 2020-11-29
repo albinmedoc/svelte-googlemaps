@@ -22,7 +22,7 @@
     "dist",
     "index.d.ts"
   ],
-  "version": "1.2.2",
+  "version": "1.2.3",
   "dependencies": {},
   "author": "Albin Médoc",
   "license": "MIT",
