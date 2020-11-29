@@ -4,7 +4,7 @@ import InfoWindow from './map/InfoWindow.svelte';
 import Polyline from './map/Polyline.svelte';
 import Polygon from './map/Polygon.svelte';
 import Circle from './map/Circle.svelte';
-import Autocomplete from './Autocomplete.svelte';
+import AutoComplete from './Autocomplete.svelte';
 
 export {
     Map,
@@ -13,5 +13,5 @@ export {
     Polyline,
     Polygon,
     Circle,
-    Autocomplete,
+    AutoComplete,
 };
