@@ -4,6 +4,7 @@ export interface AutoCompleteProps {
     api_key: string;
     options?: google.maps.places.AutocompleteOptions;
     placeholder?: string;
+    autocomplete?: google.maps.places.Autocomplete;
 }
 
 declare class AutoComplete extends SvelteComponent {
@@ -20,6 +21,7 @@ declare class Circle extends SvelteComponent {
 
 export interface InfoWindowProps {
     options: google.maps.InfoWindowOptions;
+    infowindow?: google.maps.InfoWindow;
 }
 
 declare class InfoWindow extends SvelteComponent {
@@ -29,6 +31,7 @@ declare class InfoWindow extends SvelteComponent {
 export interface MapProps {
     api_key: string;
     options: google.maps.MapOptions;
+    map?: google.maps.Map;
 }
 
 declare class Map extends SvelteComponent {
@@ -37,6 +40,7 @@ declare class Map extends SvelteComponent {
 
 export interface MarkerProps {
     options: google.maps.MarkerOptions;
+    marker?: google.maps.Marker;
 }
 
 declare class Marker extends SvelteComponent {
