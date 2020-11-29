@@ -23,7 +23,7 @@
         disabled = false;
 
         autocomplete.addListener('place_changed', () => {
-            const current_place = autocomplete.getPlace();
+            current_place = autocomplete.getPlace();
             if (!current_place.geometry) {
                 return current_place = null;
             }
