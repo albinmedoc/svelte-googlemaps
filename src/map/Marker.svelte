@@ -19,7 +19,7 @@
         marker.setMap(null);
     };
 
-    $: () => {
+    const updateMarker = (options) => {
         if (marker) {
             removeMarker();
         }
@@ -29,6 +29,10 @@
             map,
         });
     };
+
+    $: {
+        updateMarker(options);
+    }
 
     // Remove the marker from the map on destroy
     onDestroy(() => {
