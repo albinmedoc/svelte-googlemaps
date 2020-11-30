@@ -7,12 +7,14 @@
     const map = getMap();
 
     export let options = {};
-
-    // Append the polygon on the map
-    const polygon = new google.maps.Polygon({
+    export let polygon = new google.maps.Polygon({
         ...options,
-        map
+        map,
     });
+
+    $: {
+        polygon.setOptions(options);
+    }
 
     // Remove the polygon from the map on destroy
     onDestroy(() => {

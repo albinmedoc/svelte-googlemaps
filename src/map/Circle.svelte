@@ -7,12 +7,14 @@
     const map = getMap();
 
     export let options = {};
-
-    // Append the circle on the map
-    const circle = new google.maps.Circle({
+    export let circle = new google.maps.Circle({
         ...options,
         map,
     });
+
+    $: {
+        circle.setOptions(options);
+    }
 
     // Remove the circle from the map on destroy
     onDestroy(() => {

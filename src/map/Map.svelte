@@ -17,10 +17,14 @@
     let map_element;
 
     // Initialize the map
-    function initialize() {
+    const initialize = () => {
         const google = window['google'];
         map = new google.maps.Map(map_element, options);
         dispatch('ready', map);
+    };
+
+    $: {
+        map.setOptions(options);
     }
 </script>
 

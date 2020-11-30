@@ -7,12 +7,14 @@
     const map = getMap();
 
     export let options = {};
-
-    // Append the polyline on the map
-    const polyline = new google.maps.Polyline({
+    export let polyline = new google.maps.Polyline({
         ...options,
-        map
+        map,
     });
+
+    $: {
+        polyline.setOptions(options);
+    }
 
     // Remove the polyline from the map on destroy
     onDestroy(() => {

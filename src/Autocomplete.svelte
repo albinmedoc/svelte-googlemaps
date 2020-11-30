@@ -32,6 +32,10 @@
         });
         dispatch('ready', autocomplete);
     }
+
+    $: {
+        autocomplete.setOptions(options);
+    }
 </script>
 
 <GoogleSDK {api_key} on:ready={initialize} />

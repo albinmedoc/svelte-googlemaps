@@ -13,6 +13,7 @@ declare class AutoComplete extends SvelteComponent {
 
 export interface CircleProps {
     options: google.maps.CircleOptions;
+    circle?: google.maps.Circle;
 }
 
 declare class Circle extends SvelteComponent {
@@ -49,6 +50,7 @@ declare class Marker extends SvelteComponent {
 
 export interface PolygonProps {
     options: google.maps.PolygonOptions;
+    polygon?: google.maps.Polygon;
 }
 
 declare class Polygon extends SvelteComponent {
@@ -57,6 +59,7 @@ declare class Polygon extends SvelteComponent {
 
 export interface PolylineProps {
     options: google.maps.PolylineOptions;
+    polyline?: google.maps.Polyline;
 }
 
 declare class Polyline extends SvelteComponent {

@@ -1,4 +1,6 @@
 <script>
+    import { info } from 'console';
+
     import { getContext } from 'svelte';
     import { key } from '../contexts.js';
 
@@ -8,28 +10,20 @@
     const marker = getMarker();
 
     export let options = {};
-    export let infowindow = undefined;
+    export let infowindow = new google.maps.InfoWindow({
+        ...options,
+    });
 
-    const removeWindow = () => {
-        infowindow.setMap(null);
+    $: {
+        infowindow.setOptions(options);
     }
-
-    $: () => {
-        if (infowindow) {
-            removeWindow();
-        }
-        // Append the infowindow on the marker
-        infowindow = new google.maps.InfoWindow({
-            ...options,
-        });
-    };
 
     marker.addListener('click', () => {
         infowindow.open(map, marker);
     });
 
-    // Remove the infowindow from the marker on destroy
+    // Remove the infowindow from the map on destroy
     onDestroy(() => {
-        removeWindow();
+        infowindow.setMap(null);
     });
 </script>
