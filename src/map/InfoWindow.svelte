@@ -1,6 +1,4 @@
 <script>
-    import { info } from 'console';
-
     import { getContext } from 'svelte';
     import { key } from '../contexts.js';
 
