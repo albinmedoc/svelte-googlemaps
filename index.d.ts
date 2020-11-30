@@ -4,6 +4,7 @@ export interface AutoCompleteProps {
     api_key: string;
     options?: google.maps.places.AutocompleteOptions;
     placeholder?: string;
+    value?: string;
     autocomplete?: google.maps.places.Autocomplete;
 }
 

@@ -24,7 +24,11 @@
     };
 
     $: {
-        map.setOptions(options);
+        (options) => {
+            if (map !== undefined) {
+                map.setOptions(options);
+            }
+        };
     }
 </script>
 

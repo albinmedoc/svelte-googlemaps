@@ -8,8 +8,8 @@
     export let options = {};
     export let placeholder = 'Enter a location';
     export let value = '';
+    export let autocomplete = undefined;
 
-    let autocomplete;
     let input_element;
     let disabled = true;
     let current_place;
@@ -26,7 +26,7 @@
         autocomplete.addListener('place_changed', () => {
             current_place = autocomplete.getPlace();
             if (!current_place.geometry) {
-                return current_place = null;
+                return (current_place = null);
             }
             dispatch('placeChanged', current_place);
         });
@@ -34,9 +34,13 @@
     }
 
     $: {
-        autocomplete.setOptions(options);
+        (options) => {
+            if (autocomplete !== undefined) {
+                autocomplete.setOptions(options);
+            }
+        };
     }
 </script>
 
 <GoogleSDK {api_key} on:ready={initialize} />
-<input bind:value bind:this={input_element} {disabled} placeholder={placeholder} />
+<input bind:value bind:this={input_element} {disabled} {placeholder} />
