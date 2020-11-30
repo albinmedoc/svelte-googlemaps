@@ -1,5 +1,5 @@
 <script>
-    import { getContext } from 'svelte';
+    import { getContext, onDestroy } from 'svelte';
     import { key } from '../contexts.js';
 
     // Get the map from context
