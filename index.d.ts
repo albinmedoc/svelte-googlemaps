@@ -24,6 +24,7 @@ declare class Circle extends SvelteComponent {
 export interface InfoWindowProps {
     options: google.maps.InfoWindowOptions;
     infowindow?: google.maps.InfoWindow;
+    visible?: boolean;
 }
 
 declare class InfoWindow extends SvelteComponent {

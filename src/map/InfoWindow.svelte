@@ -11,9 +11,15 @@
     export let infowindow = new google.maps.InfoWindow({
         ...options,
     });
+    export let visible = false;
+
+    const showInfoWindow = (visible) => {
+        visible ? infowindow.open(map, marker) : infowindow.close();
+    }
 
     $: {
         infowindow.setOptions(options);
+        showInfoWindow(visible);
     }
 
     marker.addListener('click', () => {
