@@ -25,6 +25,7 @@
 
         autocomplete.addListener('place_changed', () => {
             current_place = autocomplete.getPlace();
+            value = input_element.value;
             if (!current_place.geometry) {
                 return (current_place = null);
             }
