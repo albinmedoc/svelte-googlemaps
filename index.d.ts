@@ -5,6 +5,8 @@ export interface AutoCompleteProps {
     options?: google.maps.places.AutocompleteOptions;
     placeholder?: string;
     value?: string;
+    required?: boolean;
+    disabled?: boolean;
     autocomplete?: google.maps.places.Autocomplete;
 }
 

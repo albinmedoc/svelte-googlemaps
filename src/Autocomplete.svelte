@@ -8,10 +8,11 @@
     export let options = {};
     export let placeholder = 'Enter a location';
     export let value = '';
+    export let required = false;
+    export let disabled = false;
     export let autocomplete = undefined;
 
     let input_element;
-    let disabled = true;
     let current_place;
 
     // Initialize the autocomplete input
@@ -21,7 +22,6 @@
             input_element,
             options
         );
-        disabled = false;
 
         autocomplete.addListener('place_changed', () => {
             current_place = autocomplete.getPlace();
@@ -44,4 +44,4 @@
 </script>
 
 <GoogleSDK {api_key} on:ready={initialize} />
-<input bind:value bind:this={input_element} {disabled} {placeholder} />
+<input bind:value bind:this={input_element} {disabled} {placeholder} {required} />
